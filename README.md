@@ -46,7 +46,7 @@
 
 - Review a final itemized receipt with prices and totals.
 
-### 🖼️ Screenshots:
+### Screenshots:
 
 ![Welcom To Resturant Menu](./Assets/Welcom-to-menu.png)
 ![Choice of orders](./Assets/Orders.png)
