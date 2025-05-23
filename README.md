@@ -1,118 +1,96 @@
-# Module 21 Challenge: Takeout Restaurant Menu and Order System
+# 🍱 Takeout Restaurant Menu and Order System With Python
 
-## Your Task
+## 📌 Description
 
-Welcome to this week's Challenge! This week, you will use your new Python skills to build out a program that allows customers to place orders with a takeout restaurant, and receive an itemized receipt.
+- **Motivation:** Learn how to build a functional, interactive command-line application in Python.
+- **Purpose:** Simulate a simple takeout restaurant experience using loops, conditionals, and data structures.
+- **Problem Solved:** Allows users to browse a menu, select items with quantities, view real-time order and receive a final receipt.
+- **What I Learned:** mproved Python skills, especially in user input handling, list/dictionary manipulation, loop control, and formatted output presentation.
 
-You have been provided with some starter code. This starter code contains various functions that will help you print the menu and receipt.
+## Table of Contents
 
-You may read through all of the code, but you only need to add code to the `place_order()`, `update_order()`, and `print_itemized_receipt()` functions at the top of your starter file. Do not make any changes to the code below those functions as it may lead to errors.
+- [Installation](#installation)
+- [Usage](#usage)
+- [Credits](#credits)
+- [License](#license)
+- [Badges](#badges)
+- [Features](#features)
+- [How to Contribute](#how-to-contribute)
+- [Tests](#tests)
 
-The core skills you will utilize from your coding experience, specifically Python, will be conditionals, loops, functions, and list comprehension. Data used in this Challenge will be stored in a dictionary and a list of dictionaries.
+## Installation
 
-## User Story
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/lunahoushmand16/Restaurant-Order-System-Python
+   ```
+2. Navigate to the project folder:
+   ```sh
+   cd  Restaurant-Order-System-Python
+   ```
+3. Run the Python script:
+   ```sh
+   python3 takeout_order_system.py
+   ```
+- ✅ No external packages or database setup required.
 
-```text
-AS A hungry customer with hearing and vocal impairments
-I WANT to view a menu, place an order, and see my receipt
-SO THAT I don't have to interact with a person until I collect my food
-```
+## Usage
 
-## Acceptance Criteria
+- Run the script from your terminal.
 
-```text
-GIVEN A restaurant order system
-WHEN I launch the program
-THEN I view all of the menu items listed with their category, name, and price
-WHEN I select an item from the menu by entering a number
-THEN I am asked the quantity of that item I want to order
-WHEN I choose the quantity
-THEN I am asked if I would like to continue ordering or not
-WHEN I don't choose a valid quantity
-THEN I automatically receive 1 of that menu item
-WHEN I continue ordering
-THEN I view the menu again
-WHEN I quit ordering
-THEN I am shown my itemized order receipt and total price
-WHEN I enter an invalid response for the menu item
-THEN I am given an error message
-```
+- Browse the restaurant menu.
 
-## Mock-Up
+- Enter the item number and quantity to add it to your order.
 
-The following image shows a mock-up of the restaurant menu and ordering system:
+- Continue ordering or quit when ready.
 
-!["Mock-up of the restaurant menu in Terminal"](./Assets/python-terminal-menu.png)
+- Review a final itemized receipt with prices and totals.
 
-The following image shows a mock-up of the customer's receipt at the end of the program:
+### 🖼️ Screenshots:
 
-!["Mock-up of the customer's receipt in Terminal"](./Assets/python-terminal-receipt.png)
+![Welcom To Resturant Menu](./Assets/Welcom-to-menu.png)
+![Choice of orders](./Assets/Orders.png)
+![Total Recips](./Assets/The-Recip.png)
 
-The following image shows a mock-up of the customer typing incorrect inputs for the menu options:
+## Credits
 
-!["Mock-up of the customer typing incorrect menu options."](./Assets/incorrect-menu-options.png)
+- Created by **[Luna Houshmans](https://github.com/lunahoushmand16)**
+- Technologies used: 
+  - **[Python](https://www.python.org/)**
 
-## Getting Started
+## License
 
-This is an autograded assignment, meaning that you will follow the link below to open the assignment in a new window in the Ed platform. You will modify the existing starter code files to meet the requirements listed below.
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
 
-> **note** If you need any assistance with the Ed platform, please review the information on submitting assignments in Module 0.
+## Badges
 
-## Grading Requirements
+![GitHub repo size](https://img.shields.io/github/repo-size/lunahoushmand16/Restaurant-Order-System-Python)
+![GitHub contributors](https://img.shields.io/github/contributors/lunahoushmand16/Restaurant-Order-System-Python)
+![GitHub stars](https://img.shields.io/github/stars/lunahoushmand16/Restaurant-Order-System-Python?style=social)
 
-This Challenge is graded based on the following criteria:
+## Features
 
-### `place_order()` function 40%
+- Interactive terminal-based menu
 
-The `place_order()` function must have:
+- Handles user input validation
 
-* A continuous loop that continues displaying the menu and asking the customer what they want until the customer quits ordering. (6 points)
+- Tracks multiple item orders and quantities
 
-* A nested loop that loops through the menu dictionary to display the menu category and item followed by the price. (10 points)
+- Displays itemized receipt with total cost
 
-* A conditional statement that asks the customer if they want to continue ordering and exits the continuous loop if they type 'n' or 'N'. (6 points)
+- Easy to extend with new menu items
 
-* A list comprehension that calculates the total price for each order item by multiplying the quantity by the price. (8 points)
+## How to Contribute
 
-* A `sum()` calculation with the list comprehension to calculate the total order price, rounded to 2 decimal places. (4 points)
+1. Fork the repository
+2. Create a new branch: `git checkout -b feature-name`
+3. Make changes and commit: `git commit -m 'Add feature X'`
+4. Push changes: `git push origin feature-name`
+5. Open a pull request
 
-* A return statement that returns the customer's order in a list of dictionaries and the total order price. (6 points)
+## 🧪 Tests
 
-### `update_order()` function 45%
+This project is a basic CLI app and does not include automated tests.  
+Manual testing can be done by running the script and verifying the output for different input scenarios (e.g., valid/invalid item numbers, quantities, quitting mid-order, etc.).  
+For results of test runs, please refer to the [Screenshots](#screenshots) section above.
 
-The `update_order()` function must have:
-
-* A conditional statement that checks if the customer's input string can be converted to an integer and prints an error message if it does not. (6 points)
-
-* Type casting to convert the customer's input string to an integer. (4 points)
-
-* A conditional statement that checks if the customer's input is an item on the menu and prints an error message if it is not. (6 points)
-
-* A prompt to the customer that prints the name of the menu item to the user and asks the quantity they would like to order. (4 points)
-
-* A conditional statement that checks if the input quantity can be converted to an integer, then converts it to an integer, and defaults to 1 if it does not. (10 points)
-
-* The order list is updated with the customer's item name, price, and quantity stored in a dictionary. (10 points)
-
-* The updated order list is returned from the function. (5 points)
-
-### `print_itemized_receipt()` function 15%
-
-The `print_itemized_receipt()` function must have:
-
-* A loop that loops through each element of the order list. (5 points)
-
-* The item name, price, and quantity from each dictionary in the order list are stored as variables. (5 points)
-
-* The item name, price, and quantity are sent to the `print_receipt_line` function in the correct order. (5 points)
-
-## How to Submit the Challenge
-
-Follow the link below to open this autograded assignment in a new tab. Once you have completed the assignment in the Ed platform, submit it and you will return to Bootcamp Spot.
-
-> **note** You are allowed to miss up to two Challenge assignments and still earn your certificate. If you complete all Challenge assignments, your lowest two grades will be dropped. If you wish to skip this assignment, click Next, and move on to the next Module.
-
-> **important** No matter how difficult the course becomes, you must always turn in original work. Plagiarism is not tolerated. If your instructional or support staff determine that you have plagiarized work, your Student Success Advisor will determine the appropriate course of action based on university policy. Such actions may include, but are not limited to, a documented plagiarism discussion, an incomplete or failing grade assignment, or ineligibility for graduation.
-
----
-© 2024 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
